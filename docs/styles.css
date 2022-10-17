@@ -1,0 +1,88 @@
+:root {
+    --color-snow-white: #6581b1;
+    --color-mid-ice: #284a7a;
+    --color-dark-ice: #0a1d3d;
+    --color-sky-blue: #4080ca;
+    --color-tree: #4f5122;
+    --color-gradient: linear-gradient(
+        90deg, 
+        var(--color-snow-white) 0%,
+        var(--color-mid-ice) 30%,
+        var(--color-dark-ice) 50%,
+        var(--color-mid-ice) 100%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    justify-content: flex-end;
+    padding-right: 3vw;
+    gap: 1.5em;
+    z-index: 1;
+    height: 5em;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-dark-ice);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+header {
+    position: relative;
+    background-image: url(assets/See.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+header h1 {
+    color: var(--color-dark-ice);
+}
+
+main {
+    position: relative;
+    background: var(--color-gradient);
+}
+
+h1 {
+    color: var(--color-sky-blue);
+}
+
+#uebermich {
+    position: relative;
+    z-index: 2;
+}
+
+#uebermich::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -2.5em;
+    right: 0em;
+    left: -5em;
+    bottom: 90%;
+    background: var(--color-gradient);
+    filter: blur(10px);
+    opacity: 1;
+    transform: scaleY(1.4);
+}
