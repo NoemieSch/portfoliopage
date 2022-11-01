@@ -84,13 +84,44 @@ main {
     transform: scaleY(1.4);
 }
 
-h1 {
-    color: var(--color-sky-blue);
+#uebermich h1 {
+  padding-top: 0;
 }
 
-.rund {
-    height: 20vw;
+h1, h2 {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+h1 {
+  color: var(--color-sky-blue);
+  font-size: 30px;
+}
+
+h2 {
+  color: var(--color-snow-white);
+  font-size: 25px;
+}
+
+.foto-neben-text {
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+}
+
+.foto {
+    height: 20em;
     border-radius: 50%;
+    margin-left: 10%;
+}
+
+.foto-neben-text p {
+  color: #eee;
+  font-size: 18px;
+  padding-top: 2em;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 2em;
 }
 
 /* Lebenslauf*/
@@ -105,8 +136,8 @@ h1 {
     position: relative;
     width: 6px;
     margin: 0 auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background: var(--color-snow-white);
   }
   
@@ -162,14 +193,6 @@ h1 {
     padding-top: 5px;
   }
   
-  /* .timeline ul li div .rechts {
-    margin-right: 10px;
-  }
-
-  .timeline ul li div .links {
-    margin-right: 10px;
-  } */
-  
   .timeline ul li:nth-of-type(odd) > div {
     left: 45px;
   }
@@ -177,14 +200,6 @@ h1 {
   .timeline ul li:nth-of-type(even) > div {
     left: -545px;
   }
-  
-  /* .timeline ul li div .rechts > div {
-    left: 45px;
-  }
-  
-  .timeline ul li div .links > div {
-    left: -439px;
-  } */
   
   .timeline ul li div {
     visibility: hidden;
@@ -205,7 +220,38 @@ h1 {
     visibility: visible;
     opacity: 1;
   }
-  
+
+  footer {
+    background: #eee;
+  }
+
+  .accounts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+    padding-bottom: 1em;
+  }
+
+  .accounts img {
+    height: 5em;
+  }
+
+  .accounts img:hover {
+    animation-name: rotate;
+    animation-duration: 0.8s;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(720deg);
+    }
+  }
+
+  /*Responsiv*/
   @media screen and (max-width: 1150px){
     .timeline ul li div {
       width: 350px;
@@ -235,5 +281,18 @@ h1 {
     }
     .timeline ul li:nth-of-type(even) > div {
       left: 45px;
+    }
+    .foto-neben-text {
+      display: flex;
+      flex-direction: column;
+      place-items: center;
+    }
+    .foto {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    .foto-neben-text p {
+      padding-left: 10%;
+      padding-right: 10%;
     }
   }
