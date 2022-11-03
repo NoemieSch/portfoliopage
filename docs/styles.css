@@ -65,6 +65,7 @@ main {
     background: var(--color-gradient);
 }
 
+/*Über Mich*/
 #uebermich {
     position: relative;
     z-index: 2;
@@ -101,6 +102,9 @@ h1 {
 h2 {
   color: var(--color-snow-white);
   font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
 }
 
 .foto-neben-text {
@@ -122,6 +126,27 @@ h2 {
   padding-left: 10%;
   padding-right: 10%;
   padding-bottom: 2em;
+}
+
+/*Hobbys*/
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 7em;
+}
+
+.reihe {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 7em;
+}
+
+.icons img {
+  height: 6em;
+  background: #eee; 
+  border-radius: 50%;
 }
 
 /* Lebenslauf*/
@@ -221,6 +246,7 @@ h2 {
     opacity: 1;
   }
 
+/*Kontakt*/
   footer {
     background: #eee;
   }
@@ -253,6 +279,21 @@ h2 {
 
   /*Responsiv*/
   @media screen and (max-width: 1150px){
+    .foto-neben-text {
+      display: flex;
+      flex-direction: column;
+      place-items: center;
+    }
+    .foto {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    .foto-neben-text p {
+      padding-left: 10%;
+      padding-right: 10%;
+      text-align: center;
+    }
+
     .timeline ul li div {
       width: 350px;
       height: 200px;
@@ -273,6 +314,19 @@ h2 {
   }
   
   @media screen and (max-width: 830px){
+    .icons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2em;
+    }
+    .reihe {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 7em;
+    }
+
     .timeline ul li {
       margin-left: 20px;
     }
@@ -281,18 +335,5 @@ h2 {
     }
     .timeline ul li:nth-of-type(even) > div {
       left: 45px;
-    }
-    .foto-neben-text {
-      display: flex;
-      flex-direction: column;
-      place-items: center;
-    }
-    .foto {
-      margin-left: 10%;
-      margin-right: 10%;
-    }
-    .foto-neben-text p {
-      padding-left: 10%;
-      padding-right: 10%;
     }
   }
