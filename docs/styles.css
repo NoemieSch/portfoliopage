@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 :root {
     --color-snow-white: #6581b1;
     --color-mid-ice: #284a7a;
@@ -16,7 +18,7 @@ html {
 }
 
 * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -195,6 +197,7 @@ h2 {
     position: relative;
     width: 150px;
     height: 100px;
+    padding-right: 7px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -302,6 +305,7 @@ h2 {
     .timeline ul li div time {
         width: 350px;
         height: 20px;
+        padding-right: 0;
     }
     .timeline ul li div div {
       width: 100%;
