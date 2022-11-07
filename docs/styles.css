@@ -184,7 +184,7 @@ h2 {
     position: relative;
     bottom: 0;
     width: 500px;
-    height: 150px;
+    height: 160px;
     padding: 15px;
     background: #fff;
     box-shadow: 4px 13px 30px 1px var(--color-dark-ice);
@@ -197,14 +197,14 @@ h2 {
     position: relative;
     width: 150px;
     height: 100px;
-    padding-right: 7px;
+    padding-right: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
   .timeline ul li div div {
-    height: 120px;
+    height: 130px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -309,7 +309,7 @@ h2 {
     }
     .timeline ul li div div {
       width: 100%;
-      height: 100%;
+      /* height: 100%; */
       margin: 10px;
     }
     .timeline ul li:nth-of-type(even) > div {
