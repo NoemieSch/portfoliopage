@@ -27,20 +27,43 @@ body {
 }
 
 nav {
-    display: flex;
-    flex-direction: row;
-    place-items: center;
-    justify-content: flex-end;
-    padding-right: 3vw;
-    gap: 1.5em;
-    z-index: 1;
-    height: 5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-end;
+  height: 5em;
 }
 
-nav a {
+.navbar {
+  display: flex;
+  gap: 1.5em;
+  padding-right: 3vw;
+  z-index: 1;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar li {
+  list-style: none;
+}
+
+.navbar li a {
     text-decoration: none;
     color: var(--color-dark-ice);
     font-weight: bold;
+    padding: 16px;
+    display: block;
+}
+
+#menu {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  cursor: pointer;
+  display: none;
+  z-index: 10001;
 }
 
 section {
@@ -386,7 +409,6 @@ h2 {
     }
     .timeline ul li div div {
       width: 100%;
-      /* height: 100%; */
       margin: 10px;
     }
     .timeline ul li:nth-of-type(even) > div {
@@ -403,11 +425,53 @@ h2 {
       gap: 3em;
     }
 
+    #menu {
+      display: block;
+    }
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .navbar {
+      display: none;
+    }
+    .navbar.open {
+      position: absolute; 
+      right: 0%;
+      top: 0%;
+      width: 150px;
+      height: auto;
+      margin: 5px;
+      margin-top: 15px;
+      background: #eee;
+      display: flex;
+      border-radius: 5px;
+      transition: all 0.5s ease;
+    }
+    .navbar ul {
+      flex-direction: column;
+    }
+    .navbar li a {
+      padding: 6px;
+      padding-left: 16px;
+    }
+
+    .timeline {
+      max-width: 100vw;
+      margin-left: -100%;
+    }
     .timeline ul li {
-      margin-left: 20px;
+      margin-left: 60px;
     }
     .timeline ul li div {
+      min-height: 160px;
+      height: fit-content;
       width: calc(100vw - 91px);
+      transition: none;
+    }
+    .timeline ul li div div {
+      min-height: 130px;
+      height: fit-content;
     }
     .timeline ul li:nth-of-type(even) > div {
       left: 45px;
