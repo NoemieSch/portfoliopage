@@ -269,7 +269,8 @@ h2 {
     position: relative;
     bottom: 0;
     width: 500px;
-    height: 160px;
+    min-height: 160px;
+    height: fit-content;
     padding: 15px;
     background: #fff;
     box-shadow: 4px 13px 30px 1px var(--color-dark-ice);
@@ -289,11 +290,17 @@ h2 {
   }
   
   .timeline ul li div div {
-    height: 130px;
+    min-height: 130px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .timeline ul li div div img {
+    height: 30px;
+    overflow: hidden;
   }
   
   .timeline ul li div div h3 {
@@ -399,6 +406,25 @@ h2 {
 
     .timeline ul li div {
       width: 350px;
+      min-height: 200px;
+      height: fit-content;
+      flex-direction: column;
+    }
+    .timeline ul li div time {
+      width: 350px;
+      height: 20px;
+      padding-right: 0;
+    }
+    .timeline ul li div div {
+      width: 100%;
+      margin: 10px;
+      min-height: 130px;
+      height: fit-content;
+    }
+
+    /* ORIGINAL */
+    /* .timeline ul li div {
+      width: 350px;
       height: 200px;
       flex-direction: column;
     }
@@ -410,7 +436,7 @@ h2 {
     .timeline ul li div div {
       width: 100%;
       margin: 10px;
-    }
+    } */
     .timeline ul li:nth-of-type(even) > div {
       left: -389px;
     }
@@ -466,7 +492,7 @@ h2 {
     .timeline ul li div {
       min-height: 160px;
       height: fit-content;
-      width: calc(100vw - 91px);
+      width: calc(100vw - 100px);
       transition: none;
     }
     .timeline ul li div div {
