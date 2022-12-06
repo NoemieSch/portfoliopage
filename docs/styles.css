@@ -236,6 +236,19 @@ h2 {
   visibility: visible;
 }
 
+/* Skills */
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+
+#myChart {
+  padding: 1em;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
 /* Lebenslauf*/
 *,*::after,*::before {
     margin: 0;
@@ -324,15 +337,15 @@ h2 {
   .timeline ul li div {
     visibility: hidden;
     opacity: 0;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.7s ease-in-out;
   }
   
   .timeline ul li:nth-of-type(odd) div {
-    transform: translate3d(100px, -10px, 0) rotate(10deg);
+    transform: translate3d(1px, -100px, 0) rotate(0deg);
   }
   
   .timeline ul li:nth-of-type(even) div {
-    transform: translate3d(100px, -10px, 0) rotate(10deg);
+    transform: translate3d(1px, -100px, 0) rotate(0deg);
   }
   
   .timeline ul li.in-view div {
@@ -421,22 +434,6 @@ h2 {
       min-height: 130px;
       height: fit-content;
     }
-
-    /* ORIGINAL */
-    /* .timeline ul li div {
-      width: 350px;
-      height: 200px;
-      flex-direction: column;
-    }
-    .timeline ul li div time {
-        width: 350px;
-        height: 20px;
-        padding-right: 0;
-    }
-    .timeline ul li div div {
-      width: 100%;
-      margin: 10px;
-    } */
     .timeline ul li:nth-of-type(even) > div {
       left: -389px;
     }
@@ -493,7 +490,6 @@ h2 {
       min-height: 160px;
       height: fit-content;
       width: calc(100vw - 100px);
-      transition: none;
     }
     .timeline ul li div div {
       min-height: 130px;
@@ -501,5 +497,51 @@ h2 {
     }
     .timeline ul li:nth-of-type(even) > div {
       left: 45px;
+    }
+  }
+
+  @media screen and (max-width: 600px){
+    #laufbahn h1 {
+      margin-top: -6px;
+    }
+  }
+
+  @media screen and (max-width: 500px){
+    #laufbahn h1 {
+      margin-top: -2.7em;
+    }
+  }
+
+  @media screen and (max-width: 415px){
+    #laufbahn h1 {
+      margin-top: -13em;
+    }
+  }
+
+  @media screen and (max-width: 380px){
+    #laufbahn h1 {
+      margin-top: -8em;
+    }
+  }
+
+  @media screen and (max-width: 300px){
+    .foto {
+      height: 15em;
+    }
+
+    .card {
+      width: 270px;
+      height: 200px;
+    }
+    .card:hover img {
+      height: 6em;
+    }
+
+    #laufbahn h1 {
+      margin-top: -9em;
+    }
+
+    .accounts img {
+      height: 4em;
     }
   }
