@@ -7,6 +7,53 @@ menu.onclick = () => {
   navbar.classList.toggle("open");
 };
 
+/* Skills */
+const ctx = document.getElementById('myChart');
+      
+new Chart(ctx, {
+    type: 'radar',
+    data: {
+        labels: ['HTML', 'CSS', 'JavaScript', 'Python', 'Copy & Paste', 'Deutsch', 'Englisch', 'Französisch'],
+        datasets: [{
+            label: 'Punkte von 1-10',
+            data: [8, 7, 3, 4, 10, 9, 7, 7],
+            borderWidth: 2,
+            backgroundColor: '#6581b16b',
+            borderColor: '#6581b1',
+            pointBackgroundColor: '#4080ca',
+            pointBorderColor: '#4080ca',
+            pointHoverRadius: 5,
+            pointHoverBackgroundColor: '#284a7a',
+            pointHoverBorderColor: '#284a7a',
+            }]
+          },
+    options: {
+        scales: {
+            r: {
+              angleLines: {
+                color: '#0a1d3d'
+              },
+              grid: {
+                color: '#0a1d3d86'
+              },
+              pointLabels: {
+                font: {
+                  size: 15,
+                  family: 'Poppins',
+                },
+                color: 'black'   
+              },
+                min: 0,
+                max: 10,
+                ticks: {
+                    stepsize: 1,
+                    display: false,
+                }
+            },
+        },
+    },
+});
+
 /* Lebenslauf */
 var items = document.querySelectorAll(".timeline li");
 

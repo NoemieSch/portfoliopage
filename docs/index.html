@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Portfoliopage</title>
         <link rel="stylesheet" href="styles.css">
-        <link rel="script" href="script.js">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
     </head>
     <body>
@@ -92,6 +91,9 @@
 
             <section id="skills">
                 <h1>SKILLS</h1>
+                <div class="chart-container" style="position: relative; height:90vh; width:90vw">
+                  <canvas id="myChart"></canvas>
+                </div>
             </section>
             
             <section id="laufbahn">
@@ -203,7 +205,8 @@
             </section>
         </footer>
 
-        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="script.js"></script> 
     </body>
     <!--
       Hier sind Quellen angegeben, die für die Webseite verwendet wurden.
