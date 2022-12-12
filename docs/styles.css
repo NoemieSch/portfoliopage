@@ -31,7 +31,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   justify-content: flex-end;
-  height: 5em;
+  height: 3em;
+  background: rgba(238, 238, 238, 0.475);
 }
 
 .navbar {
@@ -55,6 +56,10 @@ nav {
     font-weight: bold;
     padding: 16px;
     display: block;
+}
+
+.navbar li a:hover {
+  color: var(--color-sky-blue);
 }
 
 #menu {
@@ -82,6 +87,7 @@ header {
 }
 
 header h1 {
+    padding-top: 2em;
     color: var(--color-dark-ice);
 }
 
@@ -285,7 +291,7 @@ h2 {
     min-height: 160px;
     height: fit-content;
     padding: 15px;
-    background: #fff;
+    background: #eee;
     box-shadow: 4px 13px 30px 1px var(--color-dark-ice);
     border-radius: 5px;
     display: flex;
@@ -454,6 +460,7 @@ h2 {
     nav {
       flex-direction: column;
       align-items: flex-start;
+      background: none;
     }
     .navbar {
       display: none;
