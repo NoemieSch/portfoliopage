@@ -87,8 +87,26 @@ header {
 }
 
 header h1 {
-    padding-top: 2em;
-    color: var(--color-dark-ice);
+  color: #0a1d3d;
+	letter-spacing: 0.003em;
+	font-size: 5em;
+	text-shadow: 0 1px #6581b1, -1px 0 #eee, -1px 2px #6581b1, -2px 1px #eee,
+		-2px 3px #6581b1, -3px 2px #eee, -3px 4px #6581b1, -4px 3px #eee,
+		-4px 5px #6581b1, -5px 4px #eee, -5px 6px #6581b1, -6px 5px #eee,
+		-6px 7px #6581b1, -7px 6px #eee, -7px 8px #6581b1, -8px 7px #eee;
+}
+
+.animate__animated.animate__backInDown {
+  --animate-duration: 1s;
+}
+
+#erstezeile {
+  padding-top: 1.5em;
+  padding-bottom: 6px;
+}
+
+#zweitezeile {
+  padding-top: 0;
 }
 
 main {
@@ -430,7 +448,7 @@ h2 {
       flex-direction: column;
     }
     .timeline ul li div time {
-      width: 350px;
+      width: 250px;
       height: 20px;
       padding-right: 0;
     }
@@ -517,6 +535,10 @@ h2 {
     #laufbahn h1 {
       margin-top: -2.7em;
     }
+
+    header h1 {
+      font-size: 3em;
+    }
   }
 
   @media screen and (max-width: 415px){
@@ -532,6 +554,10 @@ h2 {
   }
 
   @media screen and (max-width: 300px){
+    header h1 {
+      font-size: 2.5em;
+    }
+
     .foto {
       height: 15em;
     }
